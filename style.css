@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif  
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    color: white;
+    animation: head 1s ease-in-out;
+}
+@keyframes head {
+    0%{
+        transform: translateY(-100%);
+    }
+}
+nav li{
+    display: inline-block;
+    margin: 10px 20px;
+    font-weight: bold;
+}
+.main{
+    display: flex;
+    width: 100%;
+}
+.content{
+    color: white;
+    margin-top: 10%;
+    width: 55%;
+    margin-left: 5%;
+    overflow: hidden;
+    animation: content 2s ease-in-out
+}
+@keyframes content {
+    0%{
+        opacity: 0;
+        transform: translateX(-60%)
+    }
+    60%{
+        opacity: 0.5;
+    }
+}
+.content h1{
+    font-size: 100px;
+    margin-bottom: 1%;
+    letter-spacing: 10px
+}
+.content h3{
+    font-size: 30px;
+    margin-bottom: 2%
+}
+.content p{
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+button{
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none
+}
+button:hover{
+    background-color: rgb(82, 16, 16);
+    transition: 0.5s
+}
+.img{
+    width: 45%;
+    margin-top: 10%;
+    z-index: -1
+}
+img{
+    width: 40rem;
+    animation: car 4s ease-in-out 
+}
+@keyframes car {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-250%);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .content{
+        width: 100%;
+        text-align: center;
+    }
+    .img{
+        width: 100%;
+        position: absolute;
+        bottom: -3%;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 35rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .content{
+        width: 100%;
+        text-align: center;
+    }
+    .img{
+        width: 100%;
+        position: absolute;
+        bottom: -2%;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 30rem;
+    }
+}
+
+
+
